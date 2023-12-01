@@ -1,0 +1,145 @@
+// Sidebar
+
+.side-bar {
+    background: @hippo-color-01;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 306px;
+    width: 306px;
+}
+
+.side-bar__main {
+}
+
+.side-bar__title {
+    align-items: center;
+    display: flex;
+    letter-spacing: 0.12em;
+    margin-bottom: 17px;
+    padding: 37px 28px;
+    &:before {
+        .icomoon('\e914', 37, @hippo-color-02);
+        margin-right: 8px;
+    }
+}
+
+.side-bar__title-text {
+    .rem(24);
+    font-weight: 600;
+}
+
+.side-bar__title-version {
+    .rem(10);
+    color: @hippo-color-08;
+    font-weight: 500;
+}
+
+.side-bar__menu {
+    padding: 0 28px;
+}
+
+.side-bar__menu-list {
+}
+
+.side-bar__menu-item {
+    margin-bottom: 18px;
+
+    a {
+        .rem(14);
+        align-items: center;
+        border-radius: 8px;
+        color: @hippo-color-05;
+        display: flex;
+        font-weight: 500;
+        padding: 11px;
+        text-decoration: none;
+
+        &:before {
+            .icomoon('\e901', 24, @hippo-color-05);
+            margin-right: 14px;
+        }
+
+        &:after {
+            .icomoon('\e901', 10, @hippo-color-05);
+            margin-left: auto;
+        }
+
+        &:hover {
+            background: @hippo-color-04;
+            color: @hippo-color-01;
+
+            &:before,
+            &:after {
+                color: inherit;
+            }
+        }
+
+        &.dashboard-link {
+            &:before {
+                content: '\e906';
+            }
+        }
+
+        &.product-link {
+            &:before {
+                content: '\e912';
+            }
+        }
+
+        &.customers-link {
+            &:before {
+                content: '\e905';
+            }
+        }
+
+        &.income-link {
+            &:before {
+                content: '\e910';
+            }
+        }
+
+        &.promote-link {
+            &:before {
+                content: '\e913';
+            }
+        }
+
+        &.help-link {
+            &:before {
+                content: '\e90f';
+            }
+        }
+
+    }
+}
+
+.side-bar__user{
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 48px;
+    padding: 28px;
+
+}
+.side-bar__user-info {
+}
+.side-bar__user-avatar{
+    .size(42);
+    margin-right: 12px;
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+.side-bar__user-info{}
+.side-bar__user-name{
+    .rem(14);
+    font-weight: 500;
+    margin-bottom: 4px;
+
+}
+.side-bar__user-role{
+    .rem(12);
+    color: @hippo-color-11;
+}
+
