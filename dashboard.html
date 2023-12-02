@@ -9,9 +9,9 @@
 
 </head>
 <body>
-<div class="wrapper">
+<div class="page-wrapper">
     <aside class="side-bar">
-
+        <a href="#" id="toogle_menu" class="close-menu-button" title="Close menu"><span>Close menu</span></a>
         <div class="side-bar__title">
             <h2 class="side-bar__title-heading">
                     <span class="side-bar__title-text">Dashboard
@@ -40,11 +40,26 @@
         </div>
     </aside>
     <main class="main">
-        <h2 class="page-title">Hello Evano 👋🏼, </h2>
-        <div class="main-info">
 
-            <h3 class="main-info__title">All Customers</h3>
-            <h4 class="main-info__group">Active Members </h4>
+        <h2 class="page-title">
+            <div class="page-title__menu" title="Menu" data-role="menu"><span>Menu</span></div>
+            <span class="page-title__text">Hello Evano 👋🏼,</span>
+        </h2>
+
+        <div class="main-info">
+            <div class="main-info__header">
+                <div class="main-info__titles-container">
+                    <h3 class="main-info__title">All Customers</h3>
+                    <h4 class="main-info__group">Active Members </h4>
+                </div>
+
+                <!-- Search --->
+                <form action="some_action" class="main-info__search">
+                    <input type="text" placeholder="Search" class="main-info__search-input">
+                    <button title="Search" class="main-info__search-button"><span>Search</span></button>
+                </form>
+
+            </div>
 
             <div class="data-table">
 
@@ -58,55 +73,79 @@
                 </ul>
 
                 <ul class="data-row data">
-                    <li class="name">Floyd Miles</li>
-                    <li class="company">Yahoo My local</li>
-                    <li class="phone">(225) 555-0118</li>
-                    <li class="email">jane@microsoft.com</li>
-                    <li class="country">Kiribati</li>
-                    <li class="status"><button class="inactive">Inactive</button></li>
+                    <li class="name"><span class="label">Name:</span> Floyd Miles</li>
+                    <li class="company"><span class="label">Company:</span> Microsoft</li>
+                    <li class="phone"><span class="label">Phone:</span> (225) 555-0118</li>
+                    <li class="email"><span class="label">Email:</span> jane@microsoft.com</li>
+                    <li class="country"><span class="label">Country:</span> United States</li>
+                    <li class="status">
+                        <button class="status-button">Inactive</button>
+                    </li>
                 </ul>
 
                 <ul class="data-row data">
-                    <li class="name">Floyd Miles</li>
-                    <li class="company">Yahoo</li>
-                    <li class="phone">(225) 555-0118</li>
-                    <li class="email">jane@microsoft.com</li>
-                    <li class="country">Kiribati</li>
-                    <li class="status"><button class="inactive">Inactive</button></li>
+                    <li class="name"><span class="label">Name: </span> Floyd Miles</li>
+                    <li class="company"><span class="label">Company:</span> Yahoo</li>
+                    <li class="phone"><span class="label">Phone:</span> (225) 555-0118</li>
+                    <li class="email"><span class="label">Email:</span> jane@microsoft.com</li>
+                    <li class="country"><span class="label">Country:</span> Kiribati</li>
+                    <li class="status">
+                        <button class="status-button inactive">Inactive</button>
+                    </li>
                 </ul>
 
                 <ul class="data-row data">
-                    <li class="name">Floyd Miles</li>
-                    <li class="company">Yahoo</li>
-                    <li class="phone">(225) 555-0118</li>
-                    <li class="email">jane@microsoft.com</li>
-                    <li class="country">Kiribati</li>
-                    <li class="status"><button>Active</button></li>
+                    <li class="name"><span class="label">Name: </span> Floyd Miles</li>
+                    <li class="company"><span class="label">Company:</span> Yahoo</li>
+                    <li class="phone"><span class="label">Phone:</span> (225) 555-0118</li>
+                    <li class="email"><span class="label">Email:</span> jane@microsoft.com</li>
+                    <li class="country"><span class="label">Country:</span> Kiribati</li>
+                    <li class="status">
+                        <button class="status-button inactive">Active</button>
+                    </li>
                 </ul>
 
                 <ul class="data-row data">
-                    <li class="name">Floyd Miles</li>
-                    <li class="company">Yahoo</li>
-                    <li class="phone">(225) 555-0118</li>
-                    <li class="email">jane@microsoft.com</li>
-                    <li class="country">Kiribati</li>
-                    <li class="status"><button>Active</button></li>
+                    <li class="name"><span class="label">Name: </span> Floyd Miles</li>
+                    <li class="company"><span class="label">Company:</span> Yahoo</li>
+                    <li class="phone"><span class="label">Phone:</span> (225) 555-0118</li>
+                    <li class="email"><span class="label">Email:</span> jane@microsoft.com</li>
+                    <li class="country"><span class="label">Country:</span> Kiribati</li>
+                    <li class="status">
+                        <button class="status-button">Active</button>
+                    </li>
                 </ul>
 
                 <ul class="data-row data">
-                    <li class="name">Floyd Miles</li>
-                    <li class="company">Yahoo</li>
-                    <li class="phone">(225) 555-0118</li>
-                    <li class="email">jane@microsoft.com</li>
-                    <li class="country">Kiribati</li>
-                    <li class="status"><button>Active</button></li>
+                    <li class="name"><span class="label">Name: </span> Floyd Miles</li>
+                    <li class="company"><span class="label">Company:</span> Yahoo</li>
+                    <li class="phone"><span class="label">Phone:</span> (225) 555-0118</li>
+                    <li class="email"><span class="label">Email:</span> jane@microsoft.com</li>
+                    <li class="country"><span class="label">Country:</span> Kiribati</li>
+                    <li class="status">
+                        <button class="status-button">Active</button>
+                    </li>
                 </ul>
 
+            </div>
+
+            <div class="pagination">
+                <ul class="pagination__list">
+                    <li class="pagination__item prev"><a href="#" class=""><span>back</span></a></li>
+                    <li class="pagination__item"><a href="#" class="current"><span>1</span></a></li>
+                    <li class="pagination__item"><a href="#"><span>2</span></a></li>
+                    <li class="pagination__item"><a href="#"><span>3</span></a></li>
+                    <li class="pagination__item"><a href="#">4</a></li>
+                    <li class="pagination__item dots"><span>...</span></li>
+                    <li class="pagination__item"><a href="#"><span>40</span></a></li>
+                    <li class="pagination__item next"><a href="#"><span>next</span></a></li>
+                </ul>
             </div>
 
         </div>
     </main>
 </div>
+<div id="overlay" class="overlay"></div>
 </body>
 <script src="js/base.js"></script>
 </html>

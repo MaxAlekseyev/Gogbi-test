@@ -1,55 +1,8 @@
-/* stylelint-disable */
-.my-lib-font-face(
-    @family-name,
-    @font-path,
-    @font-format: false,
-    @font-weight: normal,
-    @font-style: normal,
-    @font-display: swap
-) {
-    @font-face {
-        font-display: @font-display;
-        font-family: @family-name;
-        font-style: @font-style;
-        font-weight: @font-weight;
-        src: url('@{font-path}.@{font-format}') format(@font-format);
-    }
-}
-/* stylelint-enable */
-
-.translate(@x, @y) {
-    -moz-transform: translateX(@x) translateY(@y);
-    -webkit-transform: translateX(@x) translateY(@y);
-    -o-transform: translateX(@x) translateY(@y);
-    -ms-transform: translateX(@x) translateY(@y);
-    transform: translateX(@x) translateY(@y);
-}
+// Mixins
 
 .size(@x, @y: @x) {
     width: @x + 0px;
     height: @y + 0px;
-}
-
-.to-center(@z-index: 1) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: @z-index;
-}
-
-.reset() {
-    margin: 0;
-    padding: 0;
-}
-
-.reset-list() {
-    .reset();
-    list-style: none;
-}
-
-.list-reset() {
-    .reset-list();
 }
 
 // Rem font size
@@ -82,66 +35,23 @@
     }
 }
 
-// Triangle .triangle(direction,width,height,color);
-//
-// .triangle(top, 7px, 7px, #333);
-//
+// Custom font mixin
 
-.triangle-base() {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    -moz-transform: scale(.9999);
-}
-
-.triangle(@direction: top, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = top) {
-    .triangle-base();
-    border-width: 0 @sizeV @sizeH @sizeV;
-    border-color: transparent transparent @color transparent;
-}
-
-.triangle(@direction, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = bottom) {
-    .triangle-base();
-    border-width: @sizeV @sizeH 0 @sizeV;
-    border-color: @color transparent transparent transparent;
-}
-
-.triangle(@direction, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = left) {
-    .triangle-base();
-    border-width: @sizeV @sizeH @sizeV 0;
-    border-color: transparent @color transparent transparent;
-}
-
-.triangle(@direction, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = right) {
-    .triangle-base();
-    border-width: @sizeV 0 @sizeV @sizeH;
-    border-color: transparent transparent transparent @color;
-}
-
-.triangle(@direction, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = topright) {
-    .triangle-base();
-    border-width: 0 @sizeH @sizeV 0;
-    border-color: transparent @color transparent transparent;
-}
-
-.triangle(@direction, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = bottomright) {
-    .triangle-base();
-    border-width: 0 0 @sizeH @sizeV;
-    border-color: transparent transparent @color transparent;
-}
-
-.triangle(@direction, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = bottomleft) {
-    .triangle-base();
-    border-width: @sizeH 0 0 @sizeV;
-    border-color: transparent transparent transparent @color;
-}
-
-.triangle(@direction, @sizeH: 5px, @sizeV: 5px, @color: #000) when (@direction = topleft) {
-    .triangle-base();
-    border-width: @sizeH @sizeV 0 0;
-    border-color: @color transparent transparent transparent;
+.lib-font-face(
+    @family-name,
+    @font-path,
+    @font-format: false,
+    @font-weight: normal,
+    @font-style: normal,
+    @font-display: swap
+) {
+    @font-face {
+        font-display: @font-display;
+        font-family: @family-name;
+        font-style: @font-style;
+        font-weight: @font-weight;
+        src: url('@{font-path}.@{font-format}') format(@font-format);
+    }
 }
 
 // For icomoon

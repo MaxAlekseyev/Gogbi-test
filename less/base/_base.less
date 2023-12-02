@@ -2,13 +2,8 @@
 //  All
 //  _____________________________________________
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 * {
     box-sizing: border-box;
-}
-
-html, body {
 }
 
 html {
@@ -17,22 +12,56 @@ html {
 
 body {
     .rem(14);
-    display: flex;
     background: @hippo-color-03;
-    font-family: @base-font;
     color: @hippo-color-02;
+    display: flex;
+    font-family: @base-font;
     min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
 }
 
-.wrapper {
+.page-wrapper {
     display: flex;
     flex-grow: 1;
+    left: 0;
+    position: relative;
+    transition: left .2s;
 }
 
+// Toggle menu
+.overlay {
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    height: 100vh;
+    left: -100%;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    transition: left .2s, opacity .2s;
+    opacity: 0;
+}
 
+.menu-on {
+    .page-wrapper {
+        left: @sidebar-shift;
+    }
+
+    .overlay {
+        display: block;
+        z-index: 90;
+        left: 0;
+        opacity: 1;
+    }
+}
 
 // Content
 
-.main{
+.main {
     flex-grow: 1;
 }
+
+.placeholder({
+    .rem(12);
+    color: @hippo-color-09;
+});

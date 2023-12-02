@@ -1,19 +1,5 @@
-.lib-font-face(
-    @family-name,
-    @font-path,
-    @font-format: false,
-    @font-weight: normal,
-    @font-style: normal,
-    @font-display: swap
-) {
-    @font-face {
-        font-display: @font-display;
-        font-family: @family-name;
-        font-style: @font-style;
-        font-weight: @font-weight;
-        src: url('@{font-path}.@{font-format}') format(@font-format);
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .lib-font-face(
     @family-name: 'icomoon',
     @font-path: '../fonts/icomoon',
