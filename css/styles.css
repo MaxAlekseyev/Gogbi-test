@@ -583,7 +583,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    padding-left: 10px;
+    padding-left: 0;
   }
   .main-info__title {
     margin-bottom: 0;
