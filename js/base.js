@@ -40,5 +40,3 @@ const toogleMenu = () => body.classList.toggle('menu-on');
 menu.addEventListener('click', toogleMenu);
 overlay.addEventListener('click', toogleMenu);
 closeMenu.addEventListener('click', toogleMenu);
-
-
