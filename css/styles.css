@@ -272,7 +272,7 @@ body {
     height: 100vh;
     justify-content: space-between;
     margin-left: -290px;
-    position: absolute;
+    position: fixed;
     width: 290px;
     z-index: 99;
   }
