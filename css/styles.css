@@ -26,20 +26,20 @@ body {
 }
 .overlay {
   background: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: block;
   height: 100vh;
-  left: -100%;
   position: fixed;
+  pointer-events: none;
   top: 0;
   width: 100vw;
-  transition: left 0.2s, opacity 0.2s;
+  transition: opacity 0.2s;
   opacity: 0;
 }
 .menu-on .page-wrapper {
   left: 290px;
 }
 .menu-on .overlay {
-  display: block;
+  pointer-events: all;
   z-index: 90;
   left: 0;
   opacity: 1;
@@ -67,7 +67,7 @@ body {
   will-change: left;
 }
 .overlay {
-  will-change: opacity, left;
+  will-change: opacity;
 }
 @font-face {
   font-family: 'Poppins';

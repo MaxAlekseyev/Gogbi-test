@@ -30,17 +30,19 @@ body {
 }
 
 // Toggle menu
+
 .overlay {
     background: rgba(0, 0, 0, .5);
-    display: none;
+    display: block;
     height: 100vh;
-    left: -100%;
     position: fixed;
+    pointer-events: none;
     top: 0;
     width: 100vw;
-    transition: left .2s, opacity .2s;
+    transition: opacity .2s;
     opacity: 0;
 }
+
 
 .menu-on {
     .page-wrapper {
@@ -48,7 +50,7 @@ body {
     }
 
     .overlay {
-        display: block;
+        pointer-events: all;
         z-index: 90;
         left: 0;
         opacity: 1;
