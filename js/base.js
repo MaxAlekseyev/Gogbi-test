@@ -6,6 +6,11 @@ const menu = document.querySelector('[data-role="menu"]');
 const overlay = document.querySelector('#overlay');
 const closeMenu = document.querySelector('#toogle_menu');
 
+const statuses = {
+    inactive: 'Inactive',
+    active: 'Active'
+}
+
 const desktop = () => {
     body.classList.add('desktop')
     body.classList.remove('mobile')
@@ -25,7 +30,9 @@ mediaQueryList.addEventListener('change', e => query(e))
 const statusButtons = document.querySelectorAll('.status-button');
 
 statusButtons.forEach(item => item.addEventListener('click', e => {
-    e.target.classList.toggle('inactive')
+    const target = e.target;
+    target.classList.toggle('inactive')
+    target.classList.contains('inactive') ? target.textContent = statuses.inactive : target.textContent = statuses.active;
 }));
 
 const toogleMenu = () => body.classList.toggle('menu-on');
