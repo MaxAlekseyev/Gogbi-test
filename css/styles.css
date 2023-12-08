@@ -516,10 +516,12 @@ body {
     font-weight: 400;
     padding: 10px 15px 10px 0;
   }
-  .data-row .label {
+  .data-row li:before {
+    content: attr(data-role) ": ";
+    text-transform: capitalize;
     display: inline-block;
     font-weight: 500;
-    width: 80px;
+    width: 85px;
   }
   .data-row .status {
     justify-content: flex-start;
@@ -693,4 +695,4 @@ body {
     justify-content: center;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */

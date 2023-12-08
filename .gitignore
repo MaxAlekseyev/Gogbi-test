@@ -1,3 +1,9 @@
 .idea
 *.map
-less/*.css
+/less/*.css
+node_modules
+/package.json
+/package-lock.json
+/w.cmd
+/watchers.xml
+/Gruntfile.js

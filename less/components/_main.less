@@ -192,11 +192,15 @@
     li {
         font-weight: 400;
         padding: 10px 15px 10px 0;
-    }
-    .label {
-        display: inline-block;
-        font-weight: 500;
-        width: 80px;
+
+        &:before {
+            content: attr(data-role) + ": ";
+            text-transform: capitalize;
+            display: inline-block;
+            font-weight: 500;
+            width: 85px;
+        }
+
     }
 
     .status {
