@@ -516,7 +516,7 @@ body {
     font-weight: 400;
     padding: 10px 15px 10px 0;
   }
-  .data-row li:before {
+  .data-row li:not(.status):before {
     content: attr(data-role) ": ";
     text-transform: capitalize;
     display: inline-block;
